@@ -1,12 +1,15 @@
 import "../styles/Navbar.css";
 import logo from "../resources/menu__logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const usuario = "Alfredo"; // CAMBIAR DINÁMICAMENTE
 
     const handleLogout = () => {
-        localStorage.removeItem("token");
-        window.location.href = "/login"; // redirige al login
+      localStorage.removeItem("token");
+      localStorage.removeItem("token_exp");
+        navigate("/login");// redirige al login
     };
 
     return (
