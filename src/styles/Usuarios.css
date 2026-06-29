@@ -1,0 +1,109 @@
+.usuarios-page {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: -40px auto 0;
+
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem; /* antes 1.5rem */
+}
+/* ==========================
+   FILTROS
+========================== */
+
+.usuarios-filtros-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: -30px;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+}
+
+.usuarios-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    min-width: 220px;
+}
+
+.usuarios-filtro label {
+    font-size: .85rem;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.usuarios-filtro input,
+.usuarios-filtro select {
+    padding: .8rem 1rem;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: .875rem;
+
+    transition: all .2s ease;
+}
+
+.usuarios-filtro input:focus,
+.usuarios-filtro select:focus {
+    outline: none;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* ==========================
+   TABLA
+========================== */
+
+.usuarios-table-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 1.5rem;
+    margin-top: -10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .usuarios-filtros-card {
+        flex-direction: column;
+    }
+
+    .usuarios-filtro {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,377 @@
+/* ============================================================
+   TOKENS — valores compartidos por toda la página
+   ============================================================ */
+
+:root {
+    --cfg-radius-sm:    10px;
+    --cfg-radius-md:    14px;
+    --cfg-radius-lg:    18px;
+
+    --cfg-pad-input:    .9rem 1.1rem;
+    --cfg-pad-btn:      .9rem 1.4rem;
+    --cfg-pad-section:  1.6rem;
+
+    --cfg-gap-section:  1.4rem;   /* entre bloques dentro de una sección */
+    --cfg-gap-grid:     1rem;     /* entre columnas del grid 2-col */
+
+    --cfg-border:       #e5e7eb;
+    --cfg-border-focus: #6366f1;
+    --cfg-bg-section:   white;
+    --cfg-bg-readonly:  #f8fafc;
+    --cfg-bg-card:      #f8fafc;
+
+    --cfg-color-title:  #111827;
+    --cfg-color-label:  #374151;
+    --cfg-color-muted:  #6b7280;
+    --cfg-color-slate:  #475569;
+
+    --cfg-indigo:       #4f46e5;
+    --cfg-indigo-light: #eef2ff;
+    --cfg-indigo-mid:   #6366f1;
+    --cfg-violet:       #8b5cf6;
+
+    --cfg-shadow-section: 0 4px 16px rgba(15, 23, 42, .06);
+    --cfg-shadow-btn:     0 8px 20px rgba(99, 102, 241, .22);
+    --cfg-shadow-btn-hov: 0 12px 28px rgba(99, 102, 241, .30);
+    --cfg-shadow-icon:    0 3px 10px rgba(0,0,0,.08);
+}
+
+/* ============================================================
+   PÁGINA
+   ============================================================ */
+
+.configuracion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.6rem;
+}
+
+/* ============================================================
+   SECCIÓN — contenedor blanco con borde
+   ============================================================ */
+
+.seccion {
+    background: var(--cfg-bg-section);
+    border: 1px solid var(--cfg-border);
+    border-radius: var(--cfg-radius-lg);
+    padding: var(--cfg-pad-section);
+    display: flex;
+    flex-direction: column;
+    gap: var(--cfg-gap-section);
+    box-shadow: var(--cfg-shadow-section);
+}
+
+.seccion-header {
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.seccion-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cfg-color-title);
+}
+
+.seccion-descripcion {
+    margin-top: .35rem;
+    font-size: .85rem;
+    color: var(--cfg-color-muted);
+}
+
+/* ============================================================
+   CAMPO
+   ============================================================ */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.campo-label {
+    font-size: .83rem;
+    font-weight: 600;
+    color: var(--cfg-color-label);
+}
+
+/* ============================================================
+   INPUTS (aplica a todos: perfil, seguridad)
+   ============================================================ */
+
+.input-text {
+    width: 100%;
+    padding: var(--cfg-pad-input);
+    border: 1px solid #d1d5db;
+    border-radius: var(--cfg-radius-sm);
+    background: white;
+    font-size: .875rem;
+    color: var(--cfg-color-title);
+    transition: border-color .2s, box-shadow .2s;
+    box-sizing: border-box;
+}
+
+.input-text:focus {
+    outline: none;
+    border-color: var(--cfg-border-focus);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, .12);
+}
+
+/* ============================================================
+   READONLY
+   ============================================================ */
+
+.input-readonly {
+    padding: var(--cfg-pad-input);
+    border: 1px solid var(--cfg-border);
+    border-radius: var(--cfg-radius-sm);
+    background: var(--cfg-bg-readonly);
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--cfg-color-slate);
+    margin: 0;
+}
+
+/* ============================================================
+   ALERTAS
+   ============================================================ */
+
+.alerta {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .85rem 1.1rem;
+    border-radius: var(--cfg-radius-sm);
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.alerta--ok {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.alerta--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+/* ============================================================
+   BOTÓN PRIMARIO (guardar / actualizar)
+   ============================================================ */
+
+.btn-primario {
+    border: none;
+    padding: var(--cfg-pad-btn);
+    border-radius: var(--cfg-radius-sm);
+    font-size: .875rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--cfg-indigo), var(--cfg-indigo-mid));
+    box-shadow: var(--cfg-shadow-btn);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--cfg-shadow-btn-hov);
+}
+
+.btn-primario:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ============================================================
+   ACCIONES (fila de botones al pie de cada sección)
+   ============================================================ */
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: .75rem;
+}
+
+/* ============================================================
+   GRID 2 COLUMNAS
+   ============================================================ */
+
+.perfil-campos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--cfg-gap-grid);
+}
+
+/* ============================================================
+   AVATAR (sección Perfil)
+   ============================================================ */
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    background: var(--cfg-bg-card);
+    border: 1px solid var(--cfg-border);
+    border-radius: var(--cfg-radius-md);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cfg-indigo), var(--cfg-violet));
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.avatar-nombre {
+    font-size: .925rem;
+    font-weight: 700;
+    color: var(--cfg-color-title);
+}
+
+.avatar-correo {
+    margin-top: .2rem;
+    font-size: .8rem;
+    color: var(--cfg-color-muted);
+}
+
+/* ============================================================
+   CONTRASEÑA (sección Seguridad)
+   ============================================================ */
+
+.input-password-wrapper {
+    position: relative;
+}
+
+.input-password {
+    padding-right: 3.5rem;
+}
+
+.toggle-password {
+    right: .75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: .9rem;
+    color: var(--cfg-color-muted);
+    padding: .2rem;
+    line-height: 1;
+    transition: color .2s;
+}
+
+.toggle-password:hover {
+    color: var(--cfg-indigo);
+}
+
+.password-match {
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: -.4rem;   /* pega visualmente al grid sin gap extra */
+}
+
+.password-match.match   { color: #16a34a; }
+.password-match.no-match { color: #dc2626; }
+
+/* ============================================================
+   SESIÓN
+   ============================================================ */
+
+.sesion-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    background: var(--cfg-bg-card);
+    border: 1px solid var(--cfg-border);
+    border-radius: var(--cfg-radius-md);
+}
+
+.sesion-label {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--cfg-color-muted);
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-bottom: .25rem;
+}
+
+.sesion-valor {
+    font-size: .925rem;
+    font-weight: 600;
+    color: var(--cfg-color-title);
+}
+
+.btn-cerrar-sesion {
+    border: 1px solid #fecaca;
+    padding: var(--cfg-pad-btn);
+    border-radius: var(--cfg-radius-sm);
+    font-size: .875rem;
+    font-weight: 600;
+    color: #dc2626;
+    background: #fef2f2;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s, box-shadow .2s, transform .2s;
+}
+
+.btn-cerrar-sesion:hover {
+    background: #fee2e2;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(239,68,68,.18);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 640px) {
+    .configuracion {
+        padding: 1rem;
+        gap: 1.2rem;
+    }
+
+    .seccion {
+        padding: 1.2rem;
+        gap: 1.2rem;
+    }
+
+    .perfil-campos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acciones {
+        justify-content: stretch;
+    }
+
+    .btn-primario {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sesion-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-cerrar-sesion {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,150 @@
+.tickets-page {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: -40px auto;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.tickets-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.tickets-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.tickets-header p {
+    margin-top: .5rem;
+
+    color: #6b7280;
+}
+
+.btn-nuevo-ticket {
+    border: none;
+
+    padding: .9rem 1.4rem;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    transition: all .2s ease;
+}
+
+.btn-nuevo-ticket:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,.25);
+}
+/* ==========================
+   PAGINACIÓN
+========================== */
+
+.paginacion {
+    margin-top: -30px;
+    margin-bottom: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: .85rem 1.25rem;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+}
+
+.paginacion button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 110px;
+
+    padding: .65rem 1rem;
+
+    border: 1px solid #dbe3f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: .85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: #f8fafc;
+
+    border-color: #6366f1;
+
+    color: #4f46e5;
+
+    transform: translateY(-1px);
+}
+
+.paginacion button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.paginacion-info {
+    display: flex;
+    align-items: center;
+
+    padding: .65rem 1rem;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    color: #4338ca;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}

@@ -1,0 +1,183 @@
+.ticket-adjuntos {
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 1.5rem;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+
+    transition: all .25s ease;
+}
+
+.ticket-adjuntos:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.06),
+        0 16px 40px rgba(0,0,0,.08);
+}
+
+.ticket-adjuntos h3 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.ticket-adjuntos h3 span {
+    padding: .15rem .6rem;
+
+    border-radius: 999px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.space-y-2 {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.adjunto-item {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border: 1px solid #f3f4f6;
+    border-radius: 14px;
+
+    background: #fafafa;
+
+    transition: all .2s ease;
+}
+
+.adjunto-item:hover {
+    background: white;
+
+    border-color: #dbeafe;
+
+    transform: translateX(3px);
+}
+
+.adjunto-icono {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+
+    flex-shrink: 0;
+}
+
+.adjunto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.adjunto-nombre {
+    display: block;
+
+    color: #111827;
+
+    font-size: .9rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.adjunto-nombre:hover {
+    color: #4338ca;
+}
+
+.adjunto-meta {
+    margin-top: .35rem;
+
+    color: #6b7280;
+
+    font-size: .75rem;
+
+    line-height: 1.4;
+}
+
+.adjunto-descarga {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6b7280;
+
+    flex-shrink: 0;
+
+    transition: all .2s ease;
+}
+
+.adjunto-item:hover .adjunto-descarga {
+    color: #4338ca;
+    border-color: #c7d2fe;
+}
+
+.ticket-adjuntos-empty {
+    padding: 1rem;
+
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    text-align: center;
+
+    color: #6b7280;
+}
+
+.tipo-application\/pdf {
+    background: #fef2f2;
+}
+
+.tipo-image\/png,
+.tipo-image\/jpeg {
+    background: #ecfdf5;
+}
+
+.tipo-application\/zip {
+    background: #fffbeb;
+}

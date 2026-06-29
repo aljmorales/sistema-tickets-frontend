@@ -1,0 +1,207 @@
+.reportes-tabla-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================
+   HEADER
+========================== */
+.reportes-tabla-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.reportes-tabla-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.reportes-tabla-subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.tabla-conteo {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+/* ==========================
+   EXPORTAR
+========================== */
+.btn-exportar {
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background: #10b981; /* Verde esmeralda (más intuitivo para Excel/CSV) */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-exportar:hover {
+    background: #059669;
+}
+
+.btn-exportar:active {
+    transform: scale(0.98);
+}
+
+/* ==========================
+   TABLA STRUCTURE
+========================== */
+.reportes-tabla-wrapper {
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.reportes-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: inherit;
+}
+
+.reportes-tabla thead {
+    background: #f9fafb;
+}
+
+.reportes-tabla th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.reportes-tabla td {
+    padding: 0.9rem 1rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.tabla-row {
+    transition: background-color 0.15s ease;
+}
+
+.tabla-row:hover {
+    background: #f3f4f6;
+}
+
+.tabla-row:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================
+   CONTENIDOS DE CELDAS
+========================== */
+.codigo-ticket {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e40af;
+    background: #dbeafe;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+.titulo-ticket {
+    font-weight: 600;
+    color: #1f2937;
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Evita que títulos larguísimos rompan la tabla */
+}
+
+.texto-principal {
+    color: #374151;
+    font-weight: 500;
+}
+
+.texto-secundario {
+    color: #6b7280;
+}
+
+/* ==========================
+   BADGES (ESTADOS Y PRIORIDADES)
+========================== */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Variaciones de Estado/Prioridad */
+.badge-pendiente {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.badge-proceso {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.badge-completado {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.badge-alta {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-media {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.badge-baja {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+/* ==========================
+   VACÍO
+========================== */
+.tabla-vacia {
+    text-align: center;
+    padding: 3rem 1rem !important;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    .reportes-tabla-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-exportar {
+        width: 100%;
+    }
+}

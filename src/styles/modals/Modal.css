@@ -1,0 +1,121 @@
+/* ==========================
+   OVERLAY
+========================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    backdrop-filter: blur(6px);
+}
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.modal-container {
+    width: 100%;
+    max-width: 520px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12),
+        0 20px 60px rgba(0,0,0,.15);
+
+    animation: modalFade .2s ease;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.25rem 1.5rem;
+
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.modal-title {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+/* ==========================
+   BOTÓN CERRAR
+========================== */
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.modal-close:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* ==========================
+   ANIMACIÓN
+========================== */
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

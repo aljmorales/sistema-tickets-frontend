@@ -1,0 +1,235 @@
+/* ==========================
+   BANNER DEMO
+========================== */
+
+.seguridad-demo-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem; /* más espacio entre icono y texto */
+
+    padding: 1.2rem 1.5rem; /* más aire interno */
+
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+    border: 1px solid #ddd6fe;
+}
+
+.seguridad-demo-banner span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background: white;
+
+    font-size: 1.3rem;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.seguridad-demo-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #312e81;
+}
+
+.seguridad-demo-text {
+    margin-top: .4rem; /* más separación del título */
+    font-size: .85rem;
+    color: #6b7280;
+}
+
+/* ==========================
+   CARD PRINCIPAL
+========================== */
+
+.seguridad-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem; /* más separación entre secciones */
+
+    padding: 1.4rem;
+    border-radius: 16px;
+
+    background: #fafafa;
+    border: 1px solid #f1f5f9;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.seguridad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .8rem; /* separación con inputs */
+}
+
+.seguridad-header h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.toggle-password {
+    border: none;
+    padding: .55rem 1rem;
+    border-radius: 10px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.toggle-password:hover {
+    background: #e0e7ff;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.seguridad-input {
+    width: 100%;
+    padding: 1rem 1.2rem; /* más aire interno */
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: white;
+    font-size: .9rem;
+    transition: all .2s ease;
+}
+
+.seguridad-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.seguridad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1.2rem; /* más espacio entre inputs */
+}
+
+/* ==========================
+   ESTADO PASSWORD
+========================== */
+
+.password-status {
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.password-status.success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+}
+
+.password-status.error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+/* ==========================
+   REGLAS
+========================== */
+
+.password-rules {
+    padding: 1.2rem 1.4rem;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+}
+
+.password-rules p {
+    margin-bottom: .8rem; /* más separación con lista */
+    font-size: .85rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+.password-rules ul {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; /* más espacio entre reglas */
+}
+
+.password-rules li {
+    font-size: .82rem;
+    color: #6b7280;
+}
+
+/* ==========================
+   ACCIONES
+========================== */
+
+.seguridad-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* más espacio entre botones */
+    margin-top: 1.2rem; /* separación del contenido */
+}
+
+.seguridad-btn {
+    padding: 1rem 1.4rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9ca3af, #6b7280);
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.seguridad-btn:hover {
+    transform: translateY(-2px);
+}
+
+.seguridad-demo-badge {
+    padding: .55rem 1rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #c7d2fe;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+    .seguridad-grid {
+        grid-template-columns: 1fr;
+    }
+    .seguridad-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .seguridad-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .8rem;
+    }
+    .seguridad-btn {
+        width: 100%;
+    }
+}

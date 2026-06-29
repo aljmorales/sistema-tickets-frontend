@@ -1,0 +1,196 @@
+/* ====================================
+   SECCIONES
+==================================== */
+
+.config-seccion {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 1.6rem; /* más aire interno */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem; /* más separación entre bloques */
+
+    box-shadow: 0 6px 16px rgba(15, 23, 42, .05);
+}
+
+.config-seccion-header {
+    align-items: center;
+    gap: 1.2rem; /* más espacio entre icono y texto */
+
+    padding-bottom: 1.2rem; /* separación clara con contenido */
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.config-seccion-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    font-size: 1.3rem;
+
+    background: linear-gradient(135deg, #eef2ff, #ede9fe);
+    color: #4f46e5;
+
+    flex-shrink: 0;
+}
+
+.config-seccion-titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.config-seccion-descripcion {
+    margin-top: .35rem; /* más separación del título */
+    font-size: .88rem;
+    color: #6b7280;
+}
+
+.config-seccion-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* más espacio entre campos */
+}
+
+/* ====================================
+   CAMPOS
+==================================== */
+
+.config-campo {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem; /* más separación entre label e input */
+}
+
+.config-campo-label {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* ====================================
+   INPUTS
+==================================== */
+
+.config-campo input,
+.config-campo select,
+.config-campo textarea {
+    width: 100%;
+    padding: 1rem 1.2rem; /* más aire interno */
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: white;
+    font-size: .9rem;
+    transition: all .2s ease;
+}
+
+.config-campo input:focus,
+.config-campo select:focus,
+.config-campo textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* ====================================
+   READONLY
+==================================== */
+
+.config-readonly {
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* ====================================
+   ALERTAS
+==================================== */
+
+.config-alert {
+    display: flex;
+    align-items: center;
+    gap: .8rem; /* más espacio entre icono y texto */
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.config-alert.success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.config-alert.error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.config-alert.info {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+}
+
+.config-alert span:first-child {
+    font-size: 1.1rem;
+}
+
+/* ====================================
+   BOTONES GENERALES
+==================================== */
+
+.btn-primario {
+    border: none;
+    padding: 1rem 1.4rem; /* más aire interno */
+    border-radius: 12px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    box-shadow: 0 10px 22px rgba(99,102,241,.22);
+    transition: all .2s ease;
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(99,102,241,.28);
+}
+
+.btn-primario:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media (max-width: 768px) {
+    .config-seccion {
+        padding: 1.2rem;
+    }
+    .config-seccion-header {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .config-seccion-icon {
+        width: 46px;
+        height: 46px;
+    }
+}

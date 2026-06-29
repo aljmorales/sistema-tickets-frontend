@@ -1,0 +1,218 @@
+.modal-tecnico {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Técnico actual */
+
+.modal-tecnico-actual {
+    padding: 1rem;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.modal-tecnico-label {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+
+    color: #6b7280;
+
+    margin-bottom: .75rem;
+}
+
+.modal-tecnico-info {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.modal-tecnico-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.modal-tecnico-nombre {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Campos */
+
+.modal-campo {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.modal-label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.modal-required {
+    color: #dc2626;
+    margin-left: .15rem;
+}
+
+.modal-select {
+    width: 100%;
+
+    padding: .85rem 1rem;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: .875rem;
+    color: #111827;
+
+    transition: all .2s ease;
+}
+
+.modal-select:focus {
+    outline: none;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* Loading */
+
+.modal-loading {
+    padding: .85rem 1rem;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+
+    color: #6b7280;
+    font-size: .875rem;
+}
+
+/* Error */
+
+.modal-error {
+    padding: .85rem 1rem;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+    font-size: .875rem;
+}
+
+/* Acciones */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: .75rem;
+
+    padding-top: .5rem;
+}
+
+.modal-btn-secundario {
+    padding: .75rem 1rem;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background: white;
+
+    color: #4b5563;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.modal-btn-secundario:hover {
+    background: #f9fafb;
+}
+
+.modal-btn-primario {
+    padding: .75rem 1rem;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.modal-btn-primario:hover:not(:disabled) {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(99,102,241,.25);
+}
+
+.modal-btn-primario:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* Sin permisos */
+
+.modal-tecnico-bloqueado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    text-align: center;
+
+    padding: 1rem 0;
+}
+
+.modal-tecnico-lock {
+    font-size: 3rem;
+}
+
+.modal-tecnico-bloqueado-texto {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: .9rem;
+}

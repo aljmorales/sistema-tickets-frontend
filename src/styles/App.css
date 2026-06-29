@@ -1,0 +1,27 @@
+.layout {
+  display: flex;
+  height: 100vh; /* Sidebar ocupa todo el alto */
+}
+
+.sidebar-principal {
+  width: 220px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}

@@ -1,0 +1,243 @@
+/* ===========================
+   CARD
+=========================== */
+
+.tickets-table-card{
+    width:100%;
+    max-width:1150px;
+    margin:0 auto;
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 6px 20px rgba(15,23,42,.05),
+        0 2px 6px rgba(15,23,42,.04);
+}
+
+/* ===========================
+   WRAPPER
+=========================== */
+
+.tickets-table-wrapper{
+    overflow-x:auto;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.tickets-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.tickets-table thead{
+    background:#f8fafc;
+}
+
+.tickets-table th{
+
+    padding:15px 18px;
+
+    text-align:left;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    color:#6b7280;
+
+    text-transform:uppercase;
+    letter-spacing:.05em;
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+.tickets-table td{
+
+    padding:15px 18px;
+
+    font-size:.88rem;
+
+    color:#374151;
+
+    border-bottom:1px solid #eef2f7;
+
+    vertical-align:middle;
+}
+
+.tickets-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+/* ===========================
+   ROW
+=========================== */
+
+.tabla-row{
+
+    cursor:pointer;
+
+    transition:
+        background .18s ease,
+        transform .18s ease;
+}
+
+.tabla-row:hover{
+
+    background:#f9fafb;
+
+    transform:scale(1.002);
+}
+
+/* ===========================
+   CÓDIGO
+=========================== */
+
+.codigo-ticket{
+
+    display:inline-block;
+
+    padding:.32rem .65rem;
+
+    border-radius:7px;
+
+    background:#eef2ff;
+
+    color:#4f46e5;
+
+    font-weight:700;
+
+    font-size:.75rem;
+
+    font-family:monospace;
+
+    max-width:100px;
+}
+
+/* ===========================
+   TITULO
+=========================== */
+
+.titulo-ticket{
+
+    max-width:240px;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+
+    font-weight:600;
+
+    color:#111827;
+}
+
+/* ===========================
+   TEXTOS
+=========================== */
+
+.texto-principal{
+
+    font-weight:500;
+
+    color:#374151;
+}
+
+.texto-secundario{
+
+    color:#6b7280;
+}
+
+/* ===========================
+   BADGES
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:.35rem .7rem;
+
+    border-radius:999px;
+
+    font-size:.73rem;
+
+    font-weight:600;
+}
+
+/* Estados */
+
+.badge-pendiente{
+
+    background:#fef3c7;
+
+    color:#b45309;
+}
+
+.badge-proceso{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+}
+
+.badge-completado{
+
+    background:#dcfce7;
+
+    color:#15803d;
+}
+
+/* Prioridades */
+
+.badge-alta{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+}
+
+.badge-media{
+
+    background:#ffedd5;
+
+    color:#ea580c;
+}
+
+.badge-baja{
+
+    background:#f3f4f6;
+
+    color:#4b5563;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .tickets-table th,
+    .tickets-table td{
+
+        padding:13px;
+    }
+}

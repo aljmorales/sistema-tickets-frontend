@@ -1,0 +1,232 @@
+.ticket-header {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 2rem;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all .25s ease;
+}
+
+.ticket-header::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+.ticket-header:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.06),
+        0 16px 40px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   VOLVER
+========================== */
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    margin-bottom: 2rem;
+
+    padding: .55rem .95rem;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    background: white;
+
+    color: #4b5563;
+
+    font-size: .875rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.btn-volver:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+.ticket-header .codigo {
+    font-size: .75rem;
+
+    font-family: monospace;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+}
+
+.ticket-header h2 {
+    margin-top: .5rem;
+
+    font-size: 1.9rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #111827;
+}
+
+.ticket-header .descripcion {
+    margin-top: 1rem;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+
+    max-width: 75ch;
+}
+
+/* ==========================
+   BADGES
+========================== */
+
+.ticket-header .badges {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: .75rem;
+
+    margin-top: 1.5rem;
+}
+
+.ticket-header .badge {
+    padding: .55rem 1rem;
+
+    border-radius: 999px;
+
+    border: 1px solid transparent;
+
+    font-size: .85rem;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================
+   ACCIONES
+========================== */
+
+.ticket-header-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.ticket-header-actions button {
+    min-width: 180px;
+
+    padding: .85rem 1.25rem;
+
+    border-radius: 12px;
+
+    font-size: .9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+/* Botón principal */
+
+.ticket-header-actions button:first-child {
+    border: none;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+}
+
+.ticket-header-actions button:first-child:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,.25);
+}
+
+/* Secundarios */
+
+.ticket-header-actions button:not(:first-child) {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    color: #374151;
+}
+
+.ticket-header-actions button:not(:first-child):hover {
+    transform: translateY(-2px);
+
+    border-color: #cbd5e1;
+
+    background: #f8fafc;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .ticket-header {
+        padding: 1.5rem;
+    }
+
+    .ticket-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .ticket-header-actions button {
+        width: 100%;
+    }
+}

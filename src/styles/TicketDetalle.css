@@ -1,0 +1,67 @@
+.ticket-detalle {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem; /* 24px uniforme entre TODOS los bloques */
+}
+
+/* ==========================
+   DETALLES + TÉCNICO + SLA
+========================== */
+
+.ticket-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(320px, 1fr);
+
+    gap: 1.5rem;
+}
+
+.ticket-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+/* ==========================
+   HISTORIAL + COMENTARIOS
+========================== */
+
+.ticket-actividad-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 1.5rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    .ticket-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-actividad-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-detalle {
+        padding: 1rem;
+    }
+}

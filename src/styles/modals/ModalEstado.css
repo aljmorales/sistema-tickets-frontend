@@ -1,0 +1,198 @@
+.modal-estado {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ======================================== */
+/* ESTADO ACTUAL */
+/* ======================================== */
+
+.estado-actual-card {
+    padding: 1rem 1.25rem;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    transition: all .2s ease;
+}
+
+.estado-actual-label {
+    font-size: .75rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+
+    color: #9ca3af;
+
+    margin-bottom: .35rem;
+}
+
+.estado-actual-valor {
+    font-size: .95rem;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+/* ======================================== */
+/* FORMULARIO */
+/* ======================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form-label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-required {
+    color: #dc2626;
+}
+
+.form-select {
+    width: 100%;
+
+    padding: .9rem 1rem;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    background: #fff;
+
+    color: #111827;
+    font-size: .9rem;
+
+    transition: all .2s ease;
+}
+
+.form-select:focus {
+    outline: none;
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.08);
+}
+
+/* ======================================== */
+/* ALERTA */
+/* ======================================== */
+
+.warning-box {
+    padding: .9rem 1rem;
+
+    border-radius: 14px;
+
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+
+    color: #92400e;
+
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+/* ======================================== */
+/* ERROR */
+/* ======================================== */
+
+.error-message {
+    padding: .9rem 1rem;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+    font-size: .875rem;
+}
+
+/* ======================================== */
+/* SIN PERMISOS */
+/* ======================================== */
+
+.modal-lock {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem 0;
+}
+
+.modal-lock-icon {
+    font-size: 3rem;
+}
+
+.modal-lock-text {
+    color: #4b5563;
+    font-size: .9rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+/* ======================================== */
+/* BOTONES */
+/* ======================================== */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: .75rem;
+
+    padding-top: .5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: .75rem 1.25rem;
+
+    border-radius: 12px;
+
+    font-size: .875rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.btn-primary {
+    border: none;
+
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.btn-primary:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: white;
+    color: #374151;
+
+    border: 1px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+    background: #f9fafb;
+}

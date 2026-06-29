@@ -1,0 +1,218 @@
+/* ==========================
+   BANNER DEMO
+========================== */
+
+.perfil-demo-banner {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+
+    padding: 1rem 1.1rem;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff
+        );
+
+    border: 1px solid #ddd6fe;
+
+    margin-bottom: 1rem;
+}
+
+.perfil-demo-banner span {
+    font-size: 1.5rem;
+}
+
+.perfil-demo-title {
+    font-size: .9rem;
+    font-weight: 700;
+
+    color: #312e81;
+}
+
+.perfil-demo-text {
+    margin-top: .15rem;
+
+    font-size: .8rem;
+
+    color: #6b7280;
+}
+
+/* ==========================
+   PERFIL
+========================== */
+
+.perfil-avatar-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    background: #fafafa;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    margin-bottom: 1rem;
+}
+
+.perfil-avatar {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.perfil-nombre {
+    font-size: .95rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.perfil-correo {
+    margin-top: .2rem;
+
+    font-size: .82rem;
+
+    color: #6b7280;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    margin-bottom: .9rem;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.perfil-input {
+    width: 100%;
+
+    padding: .85rem 1rem;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: .875rem;
+
+    transition: all .2s ease;
+}
+
+.perfil-input:focus {
+    outline: none;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* ==========================
+   ACCIONES
+========================== */
+
+.perfil-actions {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    margin-top: 1rem;
+}
+
+.perfil-btn-demo {
+    border: none;
+
+    padding: .85rem 1.2rem;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color: white;
+
+    font-size: .875rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.perfil-btn-demo:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(99,102,241,.20);
+}
+
+.perfil-demo-badge {
+    padding: .45rem .8rem;
+
+    border-radius: 999px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .perfil-btn-demo {
+        width: 100%;
+    }
+}

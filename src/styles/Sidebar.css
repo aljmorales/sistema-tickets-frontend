@@ -1,0 +1,101 @@
+/* Reset básico */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Sidebar principal */
+.sidebar-principal {
+    width: 220px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+}
+
+/* Título elegante */
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Navegación */
+.sidebar-principal nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Links */
+.sidebar-principal a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #222;
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover suave */
+.sidebar-principal a:hover {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+/* Iconos */
+.material-symbols-outlined {
+    font-size: 20px;
+    color: #444;
+}
+
+/* ==========================
+   LINK ACTIVO
+========================== */
+
+.sidebar-principal a.active{
+    position: relative;
+
+    background: #f4f3ff;
+    color: #4f46e5;
+
+    font-weight: 600;
+}
+
+/* Icono activo */
+
+.sidebar-principal a.active .material-symbols-outlined{
+    color: #4f46e5;
+}
+
+/* Barra lateral */
+
+.sidebar-principal a.active::before{
+
+    content: "";
+
+    position: absolute;
+
+    left: -1rem;
+
+    top: 8px;
+
+    bottom: 8px;
+
+    width: 4px;
+
+    border-radius: 20px;
+
+    background: #6366f1;
+}

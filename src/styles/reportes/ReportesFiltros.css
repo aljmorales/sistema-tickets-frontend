@@ -1,0 +1,163 @@
+.reportes-filtros-card {
+    margin-top: -20px;
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 1rem;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 8px 24px rgba(0,0,0,.05);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.reportes-filtros-header {
+    margin-bottom: 1rem;
+}
+
+.reportes-filtros-title {
+    font-size: .95rem;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.reportes-filtros-description {
+    margin-top: .25rem;
+
+    font-size: .8rem;
+
+    color: #6b7280;
+}
+
+/* ==========================
+   GRID
+========================== */
+.reportes-filtros-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(160px, 1fr));
+
+    gap: .75rem;
+}
+/* ==========================
+   CAMPOS
+========================== */
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+
+    gap: .45rem;
+}
+.filtro-label {
+    font-size: .72rem;
+    font-weight: 600;
+
+    color: #6b7280;
+}
+
+.filtro-control {
+    width: 100%;
+
+    padding: .65rem .8rem;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: .8rem;
+
+    transition: all .2s ease;
+}
+.filtro-control:focus {
+    outline: none;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,.12);
+}
+
+/* ==========================
+   BOTON
+========================== */
+
+.reportes-filtros-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 1.25rem;
+}
+
+.btn-generar-reporte {
+    border: none;
+
+    padding: .85rem 1.2rem;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: .85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 8px 20px rgba(79,70,229,.25);
+
+    transition: all .2s ease;
+}
+
+.btn-generar-reporte:hover {
+    transform: translateY(-2px);
+}
+
+.btn-generar-reporte:disabled {
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+.btn-generar-reporte {
+    padding: .7rem 1rem;
+
+    font-size: .8rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .reportes-filtros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reportes-filtros-actions {
+        justify-content: stretch;
+    }
+
+    .btn-generar-reporte {
+        width: 100%;
+    }
+
+}
